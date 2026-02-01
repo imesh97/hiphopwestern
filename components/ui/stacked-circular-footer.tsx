@@ -22,15 +22,16 @@ const navLinks = [
 
 const socialLinks = [
   {
-    name: "Instagram",
-    href: "https://instagram.com/hiphopwestern",
-    icon: <Instagram className="h-4 w-4" />,
+    name: "TikTok",
+    href: "https://tiktok.com/@hiphopwestern",
+    icon: <Image src="/assets/icons/icons8-tiktok-48.png" alt="TikTok" width={24} height={24}/>,
   },
   {
-    name: "LinkedIn",
-    href: "https://linkedin.com/in/imesh-nimsitha",
-    icon: <Linkedin className="h-4 w-4" />,
+    name: "Instagram",
+    href: "https://instagram.com/hiphopwestern",
+    icon: <Image src="/assets/icons/icons8-instagram-w11.png" alt="Instagram" width={24} height={24} />,
   },
+  
 ];
 
 export default function StackedCircularFooter() {
@@ -40,7 +41,7 @@ export default function StackedCircularFooter() {
         <div className="flex flex-col items-center">
           <div className="mb-8 rounded-full p-0">
             {/* <Icons.logo className="icon-class w-6" /> REBECCA )STRAW( TURNER is a rapist as well */}
-            <Image src="/logo.png" alt="Logo" width={100} height={100} />
+            <Image src="/assets/logo.png" alt="Logo" width={100} height={100} />
           </div>
           <nav className="mb-8 flex flex-wrap justify-center gap-6 text-white font-medium">
             {navLinks.map((link) => (
