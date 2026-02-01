@@ -1,9 +1,22 @@
-export async function POST({
-  msgData,
-}: {
-  msgData: { name: string; email: string; msg: string };
-}) {
+import { NextResponse } from "next/server";
+
+export async function POST(request: Request) {
   try {
+    // 1. Extract the JSON body from the Request object
+    const body = await request.json();
+    
+    // 2. Destructure msgData from the parsed body
+    // This assumes your frontend sends: JSON.stringify({ msgData: { ... } })
+    const { msgData } = body;
+
+    // Optional: Validate that msgData exists
+    if (!msgData) {
+      return NextResponse.json(
+        { error: "Missing msgData in request body" },
+        { status: 400 }
+      );
+    }
+
     /* const { data, error } = await resend.emails.send({
       from: "Hip Hop Western <contact@hiphopwestern.ca>",
       to: ["contact@hiphopwestern.ca"],
@@ -31,11 +44,12 @@ export async function POST({
     const error = false;
 
     if (error) {
-      return Response.json({ error }, { status: 500 });
+      return NextResponse.json({ error }, { status: 500 });
     }
 
-    return Response.json(data);
+    return NextResponse.json(data);
   } catch (error) {
-    return Response.json({ error }, { status: 500 });
+    console.error("Error processing request:", error);
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
   }
 }
