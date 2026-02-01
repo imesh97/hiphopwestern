@@ -81,7 +81,7 @@ export default function ContactPage() {
                   placeholder="_"
                   value={msg}
                   onChange={(e) => setMsg(e.target.value)}
-                  rows={5}
+                  rows={3}
                   className="resize bg-transparent border-none outline-none text-white/60 p-0 m-0 focus:ring-0 h-auto"
                 />
               </div>

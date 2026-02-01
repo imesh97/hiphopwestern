@@ -5,6 +5,7 @@ import { motion, stagger, useAnimate } from "motion/react";
 
 import Floating, { FloatingElement } from "@/components/ui/parallax-floating";
 import { heroImages } from "@/lib/const";
+import Link from "next/link";
 
 export default function HeroSection() {
   const [scope, animate] = useAnimate();
@@ -29,11 +30,11 @@ export default function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.88, delay: 1.5 }}
       >
-        <p className="z-50 pt-8 text-6xl md:text-8xl font-bold text-[#fdfdfd] italic">
+        <Link href="https://instagram.com/hiphopwestern" className="z-50 pt-8 text-6xl md:text-8xl font-bold text-[#fdfdfd] italic">
           hip hop
           <br />
           western.
-        </p>
+        </Link>
         {/* <p className="text-xs z-50 hover:scale-110 transition-transform bg-white text-black rounded-full py-2 w-20 cursor-pointer">
           Events
         </p> */}

@@ -4,7 +4,7 @@ import { TextParallaxContentExample } from "@/components/ui/text-parallax-conten
 
 export default function EventsSection() {
   return (
-    <div id="events">
+    <div id="events" className="pt-40 sm:pt-48">
       <TextParallaxContentExample />
     </div>
   );

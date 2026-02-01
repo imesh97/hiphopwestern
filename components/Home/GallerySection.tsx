@@ -6,9 +6,9 @@ export default function FeaturedSection() {
     <Link href="https://instagram.com/hiphopwestern">
       <main
         id="gallery"
-        className="min-h-[400px] sm:min-h-[600px] bg-black flex flex-col items-center justify-center gap-4 px-8 py-2"
+        className="min-h-[333px] sm:min-h-[600px] bg-black flex flex-col items-center justify-center gap-4 px-8 py-2"
       >
-        <div className="flex flex-col items-center gap-5 italic">
+        <div className="flex flex-col items-center gap-5">
           {/* dance? vid? x2 
           <MagneticText text="elevate" hoverText="~elevate" />
           <MagneticText text="dance." hoverText="dance~" />*/}
