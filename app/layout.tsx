@@ -11,6 +11,8 @@ import { FooterSection } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
 import { Toaster } from "@/components/ui/sonner";
 
+import { Analytics } from "@vercel/analytics/next";
+
 const fontFamily = Plus_Jakarta_Sans({
   variable: "--font-main",
   subsets: ["latin"],
@@ -39,6 +41,7 @@ export default function RootLayout({
         {children}
         <Toaster position="bottom-center" />
         <FooterSection />
+        <Analytics />
       </body>
     </html>
   );
